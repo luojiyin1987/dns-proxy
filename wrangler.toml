@@ -1,0 +1,11 @@
+name = "dns-proxy"
+main = "src/index.js"
+compatibility_date = "2026-04-15"
+workers_dev = false
+
+[vars]
+UPSTREAM_DOH_URL = "https://cloudflare-dns.com/dns-query"
+
+[[routes]]
+pattern = "dns.example.com"
+custom_domain = true

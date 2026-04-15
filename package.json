@@ -1,0 +1,15 @@
+{
+  "name": "dns-proxy",
+  "private": true,
+  "packageManager": "pnpm@10.32.1",
+  "scripts": {
+    "check": "node --check src/index.js",
+    "check:toml": "python3 -c \"import tomllib; tomllib.load(open('wrangler.toml','rb')); print('wrangler.toml OK')\"",
+    "ci": "pnpm run check && pnpm run check:toml",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}
